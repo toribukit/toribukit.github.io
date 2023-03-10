@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Evolution of Roles & Antipatterns</title>
+<link rel="stylesheet" href="../w3.css">
+</head>
+<body>
+
+<div class="w3-top">
+<div class="w3-bar w3-black w3-container" style="height:98px">
+<h3>Evolution of Roles & Antipatterns: k-9</h3>
+<p>See others: <a href="../bw/index.html">bitcoin-wallet</a> &#x25C6;
+<a href="../sw/index.html">sweethome3d</a></p>
+</div>
+</div>
+
+<div class="w3-bottom" style="margin-left:240px">
+<div class="w3-bar w3-white w3-container">
+<p>Legend: <img src="../legend_hz.svg"></p>
+</div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-light-grey" style="width:240px">
+
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '01')">Roles</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '02')">Roles (collapsed)</button> 
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '03')">All Antipatterns</button> 
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04a')">AntiSingleton</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04b')">BaseClassShouldBeAbstract</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04c')">Blob</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04d')">ClassDataShouldBePrivate</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04e')">ComplexClass</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04f')">LazyClass</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04g')">LongMethod</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04h')">LongParameterList</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04i')">RefusedParentBequest</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04j')">SpaghettiCode</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04k')">SpeculativeGenerality</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04l')">ManyFieldAttributesButNotComplex</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openSVG(event, '04m')">SwissArmyKnife</button>
+</nav>
+
+<div style="margin-left:240px; margin-top:98px" class="w3-container">
+  <br/>
+  <div id="01"  class="w3-container city" style="display:none"><img src="01_roles.svg" width="600"></div>
+  <div id="02"  class="w3-container city" style="display:none"><img src="02_roles_collapsed.svg" width="600"></div>
+  <div id="03"  class="w3-container city" style="display:none"><img src="03_All.svg" width="600"></div>
+  <div id="04a" class="w3-container city" style="display:none"><img src="04_AntiSingleton.svg" width="600"></div>
+  <div id="04b" class="w3-container city" style="display:none"><img src="04_BaseClassShouldBeAbstract.svg" width="600"></div>
+  <div id="04c" class="w3-container city" style="display:none"><img src="04_Blob.svg" width="600"></div>
+  <div id="04d" class="w3-container city" style="display:none"><img src="04_ClassDataShouldBePrivate.svg" width="600"></div>
+  <div id="04e" class="w3-container city" style="display:none"><img src="04_ComplexClass.svg" width="600"></div>
+  <div id="04f" class="w3-container city" style="display:none"><img src="04_LazyClass.svg" width="600"></div>
+  <div id="04g" class="w3-container city" style="display:none"><img src="04_LongMethod.svg" width="600"></div>
+  <div id="04h" class="w3-container city" style="display:none"><img src="04_LongParameterList.svg" width="600"></div>
+  <div id="04i" class="w3-container city" style="display:none"><img src="04_RefusedParentBequest.svg" width="600"></div>
+  <div id="04j" class="w3-container city" style="display:none"><img src="04_SpaghettiCode.svg" width="600"></div>
+  <div id="04k" class="w3-container city" style="display:none"><img src="04_SpeculativeGenerality.svg" width="600"></div>
+  <div id="04l" class="w3-container city" style="display:none"><img src="04_ManyFieldAttributesButNotComplex.svg" width="600"></div>
+  <div id="04m" class="w3-container city" style="display:none"><img src="04_SwissArmyKnife.svg" width="600"></div>
+<br/>
+<br/>
+<br/>
+</div>
+
+<script>
+function openSVG(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+
+</body>
+</html>
