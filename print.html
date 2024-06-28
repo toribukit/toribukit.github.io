@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>toribukit.github.io</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,31 +62,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
                 <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Home</a></li><li class="chapter-item expanded affix "><a href="publication.html">Publications</a></li><li class="chapter-item expanded affix "><a href="project.html">Projects</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -117,9 +124,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -172,8 +179,13 @@
 <p>I am a PhD student at the Data Analytics Major - <a href="https://www.hufs.ac.kr/">HUFS</a>, South Korea. I received my master's degree from the Informatics program - <a href="https://www.itb.ac.id">Institut Teknologi Bandung</a> and my bachelor's degree from the Information Systems Department - <a href="https://www.its.ac.id">Institut Teknologi Sepuluh Nopember</a></p>
 <p>If you want to contact me, feel free to email me at me at <a href="mailto:tori@hufs.ac.kr">tori@hufs.ac.kr</a> for research or study things or at <a href="mailto:toribukit@gmail.com">toribukit@gmail.com</a> for personal or general things.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="list-of-publications"><a class="header" href="#list-of-publications">List of Publications</a></h1>
+<h2 id="2023"><a class="header" href="#2023">2023</a></h2>
+<h3 id="federated-pseudo-label-correction-using-llm-in-sensor-based-human-activity-recognition-대한산업공학회-추계학술대회-논문집-2023"><a class="header" href="#federated-pseudo-label-correction-using-llm-in-sensor-based-human-activity-recognition-대한산업공학회-추계학술대회-논문집-2023">FEDERATED PSEUDO-LABEL CORRECTION USING LLM IN SENSOR-BASED HUMAN ACTIVITY RECOGNITION (대한산업공학회 추계학술대회 논문집, 2023)</a></h3>
+<p>Tori Andika Bukit, Ericka Pamela Bermudez Pillado, Bernardo Nugroho Yahya, Seok-Lyong Lee</p>
+<h3 id="federated-topology-preserving-domain-adaptation-for-human-activity-recognition-31st-signal-processing-and-communications-applications-conference-2023"><a class="header" href="#federated-topology-preserving-domain-adaptation-for-human-activity-recognition-31st-signal-processing-and-communications-applications-conference-2023">Federated Topology Preserving Domain Adaptation for Human Activity Recognition (31st Signal Processing and Communications Applications Conference, 2023)</a></h3>
+<p>Tori Andika Bukit, Ericka Pamela Bermudez Pillado, Bernardo Nugroho Yahya, Seok-Lyong Lee</p>
 <h2 id="2022"><a class="header" href="#2022">2022</a></h2>
-<h3 id="a-framework-for-privacy-preserved-collaborative-learning-in-smart-factory-environment--intelligent-human-computer-interaction-2022"><a class="header" href="#a-framework-for-privacy-preserved-collaborative-learning-in-smart-factory-environment--intelligent-human-computer-interaction-2022">A Framework For Privacy-Preserved Collaborative Learning In Smart Factory Environment ( Intelligent Human Computer Interaction, 2022)</a></h3>
+<h3 id="a-framework-for-privacy-preserved-collaborative-learning-in-smart-factory-environment-intelligent-human-computer-interaction-2022"><a class="header" href="#a-framework-for-privacy-preserved-collaborative-learning-in-smart-factory-environment-intelligent-human-computer-interaction-2022">A Framework For Privacy-Preserved Collaborative Learning In Smart Factory Environment (Intelligent Human Computer Interaction, 2022)</a></h3>
 <p>Ericka Pamela Bermudez Pillado, Tori Bukit, Sean Yonathan Tanjung, Hyun-Woo Lim, Ignatius Iwan, Bernardo Nugroho Yahya, Seok-Lyong Lee</p>
 <h2 id="2019"><a class="header" href="#2019">2019</a></h2>
 <h3 id="improvement-of-pro-heaps-algorithm-to-analyze-interaction-changes-in-heterogeneous-graph-international-conference-on-data-and-software-engineering-2019"><a class="header" href="#improvement-of-pro-heaps-algorithm-to-analyze-interaction-changes-in-heterogeneous-graph-international-conference-on-data-and-software-engineering-2019">Improvement of PRO-HEAPS Algorithm to Analyze Interaction Changes in Heterogeneous Graph (International Conference on Data and Software Engineering, 2019)</a></h3>
@@ -201,6 +213,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
